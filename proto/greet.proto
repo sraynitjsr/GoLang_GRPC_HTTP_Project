@@ -6,6 +6,8 @@ package greet_service;
 
 service GreetService {
     rpc SayHello(NoParam) returns (HelloResponse);
+
+    rpc SayHelloServerStreaming(NamesList) returns (stream HelloResponse);
 }
 
 message NoParam{};
