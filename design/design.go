@@ -5,7 +5,7 @@ import (
 )
 
 var _ = API("calc", func() {
-	Title("Calculator Service")
+	Title("Calculator Service Front End")
 	Description("Service for multiplying numbers, a Goa teaser")
     Server("calc", func() {
         Host("localhost", func() {
