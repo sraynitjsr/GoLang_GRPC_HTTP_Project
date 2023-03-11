@@ -87,7 +87,7 @@ var _ = Service("calc", func() {
 var _ = Service("calc", func() {
 	Description("The calc service performs operations on numbers.")
 
-	Method("divide", func() {
+	Method("multiply", func() {
 		Payload(func() {
 			Field(1, "a", Int, "Left operand")
 			Field(2, "b", Int, "Right operand")
@@ -97,7 +97,7 @@ var _ = Service("calc", func() {
 		Result(Int)
 
 		HTTP(func() {
-			GET("/divide/{a}/{b}")
+			GET("/multiply/{a}/{b}")
 		})
 
 		GRPC(func() {
@@ -110,7 +110,7 @@ var _ = Service("calc", func() {
 var _ = Service("calc", func() {
 	Description("The calc service performs operations on numbers.")
 
-	Method("multiply", func() {
+	Method("divide", func() {
 		Payload(func() {
 			Field(1, "a", Int, "Left operand")
 			Field(2, "b", Int, "Right operand")
@@ -120,7 +120,7 @@ var _ = Service("calc", func() {
 		Result(Int)
 
 		HTTP(func() {
-			GET("/multiply/{a}/{b}")
+			GET("/divide/{a}/{b}")
 		})
 
 		GRPC(func() {
