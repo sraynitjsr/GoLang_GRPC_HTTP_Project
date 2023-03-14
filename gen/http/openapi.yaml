@@ -1,0 +1,167 @@
+swagger: "2.0"
+info:
+    title: Calculator Service Front End
+    description: Service for multiplying numbers, a Goa teaser
+    version: ""
+host: localhost:8000
+consumes:
+    - application/json
+    - application/xml
+    - application/gob
+produces:
+    - application/json
+    - application/xml
+    - application/gob
+paths:
+    /add/{a}/{b}:
+        get:
+            tags:
+                - calc
+            summary: add calc
+            operationId: calc#add
+            parameters:
+                - name: a
+                  in: path
+                  description: Left operand
+                  required: true
+                  type: integer
+                - name: b
+                  in: path
+                  description: Right operand
+                  required: true
+                  type: integer
+            responses:
+                "200":
+                    description: OK response.
+                    schema:
+                        type: integer
+                        format: int64
+            schemes:
+                - http
+    /divide/{a}/{b}:
+        get:
+            tags:
+                - calc
+            summary: divide calc
+            operationId: calc#divide
+            parameters:
+                - name: a
+                  in: path
+                  description: Left operand
+                  required: true
+                  type: integer
+                - name: b
+                  in: path
+                  description: Right operand
+                  required: true
+                  type: integer
+            responses:
+                "200":
+                    description: OK response.
+                    schema:
+                        type: integer
+                        format: int64
+            schemes:
+                - http
+    /multiply/{a}/{b}:
+        get:
+            tags:
+                - calc
+            summary: multiply calc
+            operationId: calc#multiply
+            parameters:
+                - name: a
+                  in: path
+                  description: Left operand
+                  required: true
+                  type: integer
+                - name: b
+                  in: path
+                  description: Right operand
+                  required: true
+                  type: integer
+            responses:
+                "200":
+                    description: OK response.
+                    schema:
+                        type: integer
+                        format: int64
+            schemes:
+                - http
+    /openapi1.json:
+        get:
+            tags:
+                - calc
+            summary: Download ./gen/http/openapi1.json
+            operationId: calc#/openapi1.json
+            responses:
+                "200":
+                    description: File downloaded
+                    schema:
+                        type: file
+            schemes:
+                - http
+    /openapi2.json:
+        get:
+            tags:
+                - calc
+            summary: Download ./gen/http/openapi2.json
+            operationId: calc#/openapi2.json
+            responses:
+                "200":
+                    description: File downloaded
+                    schema:
+                        type: file
+            schemes:
+                - http
+    /openapi3.json:
+        get:
+            tags:
+                - calc
+            summary: Download ./gen/http/openapi3.json
+            operationId: calc#/openapi3.json
+            responses:
+                "200":
+                    description: File downloaded
+                    schema:
+                        type: file
+            schemes:
+                - http
+    /openapi4.json:
+        get:
+            tags:
+                - calc
+            summary: Download ./gen/http/openapi4.json
+            operationId: calc#/openapi4.json
+            responses:
+                "200":
+                    description: File downloaded
+                    schema:
+                        type: file
+            schemes:
+                - http
+    /sub/{a}/{b}:
+        get:
+            tags:
+                - calc
+            summary: sub calc
+            operationId: calc#sub
+            parameters:
+                - name: a
+                  in: path
+                  description: Left operand
+                  required: true
+                  type: integer
+                - name: b
+                  in: path
+                  description: Right operand
+                  required: true
+                  type: integer
+            responses:
+                "200":
+                    description: OK response.
+                    schema:
+                        type: integer
+                        format: int64
+            schemes:
+                - http

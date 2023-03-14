@@ -1,0 +1,68 @@
+// Code generated with goa v3.11.1, DO NOT EDIT.
+//
+// calc protocol buffer definition
+//
+// Command:
+// $ goa gen github.com/sraynitjsr/design
+
+syntax = "proto3";
+
+package calc;
+
+option go_package = "/calcpb";
+
+// The calc service performs operations on numbers.
+service Calc {
+	// Add implements add.
+	rpc Add (AddRequest) returns (AddResponse);
+	// Sub implements sub.
+	rpc Sub (SubRequest) returns (SubResponse);
+	// Multiply implements multiply.
+	rpc Multiply (MultiplyRequest) returns (MultiplyResponse);
+	// Divide implements divide.
+	rpc Divide (DivideRequest) returns (DivideResponse);
+}
+
+message AddRequest {
+	// Left operand
+	sint32 a = 1;
+	// Right operand
+	sint32 b = 2;
+}
+
+message AddResponse {
+	sint32 field = 1;
+}
+
+message SubRequest {
+	// Left operand
+	sint32 a = 1;
+	// Right operand
+	sint32 b = 2;
+}
+
+message SubResponse {
+	sint32 field = 1;
+}
+
+message MultiplyRequest {
+	// Left operand
+	sint32 a = 1;
+	// Right operand
+	sint32 b = 2;
+}
+
+message MultiplyResponse {
+	sint32 field = 1;
+}
+
+message DivideRequest {
+	// Left operand
+	sint32 a = 1;
+	// Right operand
+	sint32 b = 2;
+}
+
+message DivideResponse {
+	sint32 field = 1;
+}
