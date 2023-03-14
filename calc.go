@@ -20,24 +20,24 @@ func NewCalc(logger *log.Logger) calc.Service {
 
 // Add implements add.
 func (s *calcsrvc) Add(ctx context.Context, p *calc.AddPayload) (res int, err error) {
-	s.logger.Print("calc.add")
-	return
+	s.logger.Println("Added Output =>", p.A+p.B)
+	return p.A + p.B, nil
 }
 
 // Sub implements sub.
 func (s *calcsrvc) Sub(ctx context.Context, p *calc.SubPayload) (res int, err error) {
-	s.logger.Print("calc.sub")
-	return
+	s.logger.Println("Subtracted Output =>", p.A-p.B)
+	return p.A - p.B, nil
 }
 
 // Multiply implements multiply.
 func (s *calcsrvc) Multiply(ctx context.Context, p *calc.MultiplyPayload) (res int, err error) {
-	s.logger.Print("calc.multiply")
-	return
+	s.logger.Println("Multiplied Output =>", p.A*p.B)
+	return p.A * p.B, nil
 }
 
 // Divide implements divide.
 func (s *calcsrvc) Divide(ctx context.Context, p *calc.DividePayload) (res int, err error) {
-	s.logger.Print("calc.divide")
-	return
+	s.logger.Println("Division Output =>", p.A/p.B)
+	return p.A / p.B, nil
 }
